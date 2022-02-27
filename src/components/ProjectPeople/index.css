@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --ff-primary: 'Inter', sans-serif;
+    --fc-darkest: #000;
+    --fc-darker: rgba(0, 0, 0, 0.8); 
+    --fc-dark: #b2b2b2;
+}
+
+.card {
+    width: 85%;
+    max-width: 850px;
+    margin: 2em auto;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card__header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.card__header__icons {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.icon:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.icon + .icon {
+    margin-left: 8px;
+}
+
+.icon--spacer {
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.icon--email {
+    color: #2d3d4f;
+    margin-right: 5px;
+}
+
+.card__email {
+    display: flex;
+    align-items: center;
+}
+
+.card__title, 
+.card__subtitle,
+.card__text {
+    font-family: var(--ff-primary);
+}
+
+.card__title {
+    font-size: 18px;
+    color: var(--fc-darkest);
+}
+
+.card__subtitle {
+    font-size: 14px;
+    font-weight: 100;
+    text-align: left;
+    color: var(--fc-dark);
+}
+
+.card__subtitle--involvement {
+    margin-bottom: 8px;
+}
+
+.card__text {
+    font-size: 15px;
+    color: var(--fc-darker);
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.card__subtitle--email {
+    color: #2d3d4f;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}

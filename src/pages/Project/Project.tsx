@@ -2,6 +2,10 @@ import React from 'react'
 import { RouteComponentProps } from 'react-router';
 import { useAppSelector } from '@redux/hooks';
 import { selectProjects } from '@redux/slices/ProjectRedux';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons"
+import { Person } from '../../components/ProjectPeople/ProejctPeople';
+import './index.css'
 
 //TODO: refactor Project page to use a Project generic component for displaying project content
 
@@ -17,12 +21,36 @@ const Project: React.FC<ProjectProps> = ({match}) => {
 
     return (
     <div>
-        this is {match.params.project_id} page
+        {/* this is a {match.params.project_id} page
         <ul>
         {projects.map((p, i) => {
             return <li key={i}>{p.name}</li>
         })} 
-        </ul>
+        </ul> */}
+        <div className='btn__container'>
+            <button className='btn btn--add-member'>
+                <FontAwesomeIcon icon={faPlus} className="icon icon--plus" />
+                <h3 className='btn__title'>add member</h3>
+            </button>
+        </div>
+        <Person 
+            name="Maddison Eliot"
+            involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
+            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
+            email='mellio10@psych.ubc.ca'
+        />
+        <Person 
+            name="Robinson John"
+            involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
+            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
+            email='mellio10@psych.ubc.ca'
+        />
+        <Person 
+            name="Kevin Peng"
+            involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
+            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
+            email='mellio10@psych.ubc.ca'
+        />
     </div>
     );
 }
