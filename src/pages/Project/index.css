@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');    
-
 .btn__container {
     width: 85%;
     max-width: 880px;
@@ -73,7 +71,7 @@
 }
 
 .btn__title {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--ff-primary);
     font-size: 0.85rem;
 }
 
