@@ -5,7 +5,7 @@ import { selectProjects } from '@redux/slices/ProjectRedux';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { Person } from '../../components/ProjectPeople/ProjectPeople';
-import './index.css'
+import './Project.css'
 
 //TODO: refactor Project page to use a Project generic component for displaying project content
 

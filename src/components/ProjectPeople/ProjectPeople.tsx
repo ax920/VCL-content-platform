@@ -1,7 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPen, faTrashCan, faEnvelope } from "@fortawesome/free-solid-svg-icons"
-import './index.css'
+import './ProjectPeople.css'
 
 interface PersonDetails {
     name: string,
