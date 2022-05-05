@@ -2,8 +2,7 @@ import React from 'react'
 import { RouteComponentProps } from 'react-router';
 import { useAppSelector } from '@redux/hooks';
 import { selectProjects } from '@redux/slices/ProjectRedux';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons"
+import AddIcon from '@material-ui/icons/Add';
 import { Person } from '../../components/ProjectPeople/ProjectPeople';
 import './Project.css'
 
@@ -29,10 +28,11 @@ const Project: React.FC<ProjectProps> = ({match}) => {
         </ul> */}
         <div className='btn__container'>
             <button className='btn btn--add-member'>
-                <FontAwesomeIcon icon={faPlus} className="icon icon--plus" />
+                <AddIcon className="icon icon--plus" />
                 <h3 className='btn__title'>add member</h3>
             </button>
         </div>
+        {/* TODO: refactor to fetch data from backend, currently hard-coded */}
         <Person 
             name="Maddison Eliot"
             involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
