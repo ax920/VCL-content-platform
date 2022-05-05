@@ -2,7 +2,7 @@ import React from 'react'
 import { RouteComponentProps } from 'react-router';
 import { useAppSelector } from '@redux/hooks';
 import { selectProjects } from '@redux/slices/ProjectRedux';
-import AddIcon from '@material-ui/icons/Add';
+import AddIcon from '@mui/icons-material/Add';
 import { Person } from '../../components/ProjectPeople/ProjectPeople';
 import './Project.css'
 
