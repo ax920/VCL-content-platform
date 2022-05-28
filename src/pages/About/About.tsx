@@ -8,10 +8,10 @@ const About: React.FC<AboutProps> = (props) => {
     <div>
       <div>This is the about page</div>
       <div className="card-container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
+        <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
+        <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
+        <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
       </div>
     </div>
   );
