@@ -82,6 +82,7 @@ const TEXT = {
         HEADER: 'Our Core Values'
       }
     },
+    BP_PLACEHOLDER: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     GAIN_SECTION: {
       HEADER: 'What can you gain?',
       DIRECTED_STUDIES: {

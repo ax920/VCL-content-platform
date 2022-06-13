@@ -101,3 +101,9 @@ h3 {
     color: #000000;
 }
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 4%;
+}
