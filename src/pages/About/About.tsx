@@ -4,6 +4,7 @@ import './About.css';
 import { TEXT } from '@statics';
 import kennyMap from '@statics/images/kenny-map.png';
 import Card from '@components/Card';
+import Footer from '@components/Footer';
 
 interface AboutProps {}
 
