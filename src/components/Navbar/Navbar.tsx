@@ -9,7 +9,6 @@ import {
   MenuItem,
   Button,
 } from '@mui/material';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { NAV, TEXT, CONSTANTS, ROUTES } from '@statics';
 import { useHandleLogout } from '@services/authService';
 import { useAppDispatch, useAppSelector } from '@redux/hooks';
@@ -18,6 +17,8 @@ import { selectIsLoggedIn } from '@redux/slices/AuthRedux';
 import { selectProjects } from '@redux/slices/ProjectRedux';
 import GenericLink from '@components/generics/Link';
 import './Navbar.css';
+import {ReactComponent as LoginIcon} from '@statics/images/search-icon.svg';
+import {ReactComponent as VCLIcon} from '@statics/images/vcl-icon.svg';
 
 const Navbar: React.FC<{}> = () => {
   const location = useLocation();
@@ -147,10 +148,13 @@ const Navbar: React.FC<{}> = () => {
     <div>
       <AppBar position="sticky" className="nav-appbar">
         <Toolbar className="nav-toolbar">
+          <div style={{marginRight: '20px'}}>
+          <VCLIcon/>
+          </div>
           <Typography className="nav-title">{TEXT.COMMON.TITLE}</Typography>
           <span className="nav-rendered-links">{renderedLinks}</span>
           <IconButton onClick={handleMenuClick}>
-            <AccountCircleIcon />
+            <LoginIcon/>
           </IconButton>
           <Menu
             id="basic-menu"
