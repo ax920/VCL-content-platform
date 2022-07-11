@@ -59,7 +59,57 @@ const TEXT = {
       FAX: '604 822 6923',
       EMAIL: 'vclmanager@gmail.com',
       DRRENSINK_CONTACT: 'rensink@psych.ubc.ca',
-      CAMPUS: 'Vancouver Campus'
+      ADMIN_CONTACT: {
+        DANIEL: '',
+        SARA: '',
+        SOGOL: ''
+      },
+      CAMPUS: 'Vancouver Campus',
+      ADDRESS: '3204 - 2136 West Mall Vancouver, BC CANADA V6T 1Z4',
+      HOURS: {
+        WEEKDAYS: 'Weekdays: 9AM-5PM',
+        WEEKENDS: 'Closed'
+      }
+  },
+
+  ABOUT_PAGE: {
+    MAIN: {
+      DESCRIPTION: {
+        P1: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        P2: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+      },
+      PHILOSOPHY: {
+        HEADER: 'Our Philosophy',
+        P1: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."',
+        P2: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."'
+      },
+      RESPONSIBILITIES: {
+        HEADER: 'Our Responsibilities'
+      },
+      VALUES: {
+        HEADER: 'Our Core Values'
+      }
+    },
+    BP_PLACEHOLDER: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    GAIN_SECTION: {
+      HEADER: 'What can you gain?',
+      DIRECTED_STUDIES: {
+        HEADER: 'Directed Studies',
+        DESCRIPTION: 'Description of how the lab can help COGS students with this project'
+      },
+      RESEARCH_EXP: {
+        HEADER: 'Research Experience',
+        DESCRIPTION: 'Description of how the lab can help COGS students with this project'
+      },
+      GRADUATE_STUDENTS: {
+        HEADER: 'Graduate Students',
+        DESCRIPTION: 'Description of how the lab can help COGS students with this project'
+      },
+      GLOBAL_RESEARCH: {
+        HEADER: 'Global Research',
+        DESCRIPTION: 'Description of how the lab can help COGS students with this project'
+      }
+    }
   }
 } as const;
 
