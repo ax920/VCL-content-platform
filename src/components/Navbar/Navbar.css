@@ -5,8 +5,14 @@
 .nav-toolbar {
 	box-sizing: border-box;
 	display: flex;
-	background-color: whitesmoke;
+	background-color: rgb(255, 255, 255);
 	color: black;
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 22.5px;
+	text-transform: uppercase;
 }
 
 .nav-toolbar .nav-title {
@@ -20,7 +26,7 @@
 }
 
 .nav-link.active {
-	color: darkblue;
+	color: #4C6199;
 }
 
 .nav-rendered-links {
