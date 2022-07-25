@@ -17,8 +17,10 @@ import { selectIsLoggedIn } from '@redux/slices/AuthRedux';
 import { selectProjects } from '@redux/slices/ProjectRedux';
 import GenericLink from '@components/generics/Link';
 import './Navbar.css';
-import {ReactComponent as LoginIcon} from '@statics/images/search-icon.svg';
+import {ReactComponent as SearchIcon} from '@statics/images/search-icon.svg';
 import {ReactComponent as VCLIcon} from '@statics/images/vcl-icon.svg';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import MobileMenu from '@components/MobileNavbar';
 
 const Navbar: React.FC<{}> = () => {
   const location = useLocation();
@@ -49,6 +51,11 @@ const Navbar: React.FC<{}> = () => {
   const handleLogout = () => {
     logout();
     handleMenuClose();
+  };
+
+  // search button
+  const handleSearchBtnClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // todo
   };
 
   const [projectAnchorEl, setProjectAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -86,7 +93,7 @@ const Navbar: React.FC<{}> = () => {
 	    lineHeight: '22.5px',
       textDecoration: 'none',
       textTransform: 'uppercase',
-      paddingBottom: '10px',
+      paddingBottom: '7px',
       letterSpacing: '-0.4px'
     };
 
@@ -145,17 +152,23 @@ const Navbar: React.FC<{}> = () => {
   });
 
   return (
-    <div>
-      <AppBar position="sticky" className="nav-appbar">
+    <div className="nav">
+      <div className="navbar-menu">
+        <AppBar position="sticky" className="nav-appbar">
         <Toolbar className="nav-toolbar">
-          <div style={{marginRight: '20px'}}>
+         <div style={{marginRight: '10px', position: 'relative'}}>
           <VCLIcon/>
           </div>
           <Typography className="nav-title">{TEXT.COMMON.TITLE}</Typography>
           <span className="nav-rendered-links">{renderedLinks}</span>
-          <IconButton onClick={handleMenuClick}>
-            <LoginIcon/>
+          <IconButton onClick={handleSearchBtnClick}>
+            <SearchIcon/>
           </IconButton>
+          <div style={{paddingLeft: '5px'}}>
+          <IconButton onClick={handleMenuClick}>
+            <AccountCircleIcon/>
+          </IconButton>
+          </div>
           <Menu
             id="basic-menu"
             anchorEl={anchorEl}
@@ -174,6 +187,8 @@ const Navbar: React.FC<{}> = () => {
           </Menu>
         </Toolbar>
       </AppBar>
+      </div>
+        <MobileMenu/>
     </div>
   );
 };

@@ -1,3 +1,7 @@
+.nav {
+	height: auto;
+	margin-bottom: 35px;
+}
 
 .hamburger-menu {
 	display: none;
@@ -5,7 +9,9 @@
 
 .navbar-menu {
 	display: block;
+	height: auto;
 }
+
 
 @media only screen and (max-width: 700px) {
 	.hamburger-menu {
@@ -14,8 +20,13 @@
 
 	.navbar-menu {
 	  display: none;
+	  height: 0% !important;
 	}
-  }
+
+	.nav {
+		height: 100px;
+	}
+}
 
 .nav-appbar {
 	margin-bottom: 10px;
@@ -59,3 +70,4 @@
 	display: flex;
 	position: relative;
 }
+
