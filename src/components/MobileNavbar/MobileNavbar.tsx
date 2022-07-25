@@ -1,21 +1,15 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import {
   AppBar,
-  Toolbar,
-  Typography,
   IconButton,
   Menu,
   MenuItem,
-  Button,
 } from '@mui/material';
-import { NAV, TEXT, CONSTANTS, ROUTES } from '@statics';
+import { TEXT, CONSTANTS} from '@statics';
 import { useHandleLogout } from '@services/authService';
 import { useAppDispatch, useAppSelector } from '@redux/hooks';
 import { appActions } from '@redux/slices/AppRedux';
 import { selectIsLoggedIn } from '@redux/slices/AuthRedux';
-import { selectProjects } from '@redux/slices/ProjectRedux';
-import GenericLink from '@components/generics/Link';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import './MobileNavbar.css';
 import {ReactComponent as SearchIcon} from '@statics/images/search-icon.svg';
