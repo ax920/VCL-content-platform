@@ -21,7 +21,7 @@ const Footer = () => {
 
     return (
 
-        <div className="container">
+        <div className="footer-container">
             <div className="footer">
                 <div className="footer-main">
                     <div className="footer-left">

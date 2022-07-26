@@ -2,6 +2,7 @@
     display: none;
     position: fixed;
     height: 132px;
+    z-index: 9998!important;
 }
 
 .mobile-header {
