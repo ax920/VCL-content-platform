@@ -6,23 +6,23 @@ import {
     KeyboardDatePicker
 } from "@material-ui/pickers";
 
-const DatePicker = () => {
-    const [selectedDate, setSelectedDate] = React.useState(
-    );
+// @ts-ignore
+const DatePicker = ({date, setDate}) => {
     const handleDateChange = (date: any) => {
-        setSelectedDate(date);
+        setDate(date);
     };
 
     return (
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
+                autoOk={true}
                 required
                 disableToolbar
                 variant="inline"
                 format="yyyy/MM/dd"
                 margin="normal"
                 id="date-picker-inline"
-                value={selectedDate}
+                value={date}
                 onChange={handleDateChange}
                 KeyboardButtonProps={{
                     "aria-label": "change date"

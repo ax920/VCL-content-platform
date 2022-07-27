@@ -6,7 +6,7 @@ import Home from '@pages/Home';
 import { ProjectWrapper, ProjectOverview } from '@pages/Project';
 import About from '@pages/About';
 import Resources from '@pages/Resources';
-import TimelineEntry from "@components/TimelineEntry/TimelineEntry";
+import TimelineEntry from "@pages/Timeline/TimelineEntry";
 
 const AppSwitch = () => {
   return (
