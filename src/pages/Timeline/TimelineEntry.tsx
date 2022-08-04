@@ -6,27 +6,40 @@ import Box from "@mui/material/Box";
 import {ROUTES} from "@statics";
 import ProjectsMultiSelect from "@components/ProjectsMultiSelect/ProjectsMultiSelect";
 import CategoriesMultiSelect from "@components/CategoriesMultiSelect/CategoriesMultiSelect";
+import {useFormik} from "formik";
+import {validationSchema} from "../../Validation/TimelineEntryValidation";
 
 
 const TimelineEntry = () => {
 
-    const [author, setAuthor] = useState("");
-    const [title, setTitle] = useState("");
-    const [contributors, setContributors] = useState("");
     const [date, setDate] = useState(new Date())
-    const [project, setProject] = useState([])
+    const [project, setProject] = useState("")
     const [categories, setCategories] = useState([]);
 
-    const handleSubmit = () => {
-        if (project.length > 0 && categories.length > 0 && author && title && contributors) {
+    const handleSubmit = (values: any) => {
+        const {author, title, contributors} = values;
+        if (project.length > 0 && categories.length > 0) {
             window.location.pathname = ROUTES.TIMELINE;
         }
     }
 
+    const formik: any = useFormik({
+        initialValues: {
+            author: "",
+            title: "",
+            contributors: "",
+        },
+        onSubmit: async (values) => {
+            await handleSubmit(values);
+
+        },
+        validationSchema: validationSchema
+    })
+
     return (
         <div className="form-container">
             <Box sx={{display: 'inline-flex', flexDirection: 'column',}} textAlign='center' component="form"
-                 onSubmit={handleSubmit}>
+                 onSubmit={formik.handleSubmit}>
                 <div className="text">
                     <Typography align="left" style={{fontWeight: 600}} variant="h5" paddingTop={5}>
                         Add Timeline Entry
@@ -34,21 +47,40 @@ const TimelineEntry = () => {
                     <p>Fill in the blanks below to add a timeline entry</p>
                 </div>
                 <div>
-                    <TextField value={author} onChange={(event) => {
-                        setAuthor(event.target.value)
-                    }} required sx={{width: 317}} id="standard-basic" label="Author" variant="standard"/>
+                    <TextField
+                        sx={{width: 317}}  variant="standard"
+                        name="author"
+                        label="Author"
+                        value={formik.values.author}
+                               onChange={formik.handleChange}
+                               error={formik.touched.author && Boolean(formik.errors.author)}
+                               helperText={formik.touched.author && formik.errors.author}
+                               required
+                               />
                 </div>
                 <div>
-                    <TextField value={title} onChange={(event) => {
-                        setTitle(event.target.value)
-                    }}
-                               required sx={{width: 317}} id="standard-basic" label="Title" variant="standard"/>
+                    <TextField
+                        sx={{width: 317}}  variant="standard"
+                        name="title"
+                        label="Title"
+                        value={formik.values.title}
+                        onChange={formik.handleChange}
+                        error={formik.touched.title && Boolean(formik.errors.title)}
+                        helperText={formik.touched.title && formik.errors.title}
+                        required
+                    />
                 </div>
                 <div>
-                    <TextField value={contributors} onChange={(event) => {
-                        setContributors(event.target.value)
-                    }}
-                               required sx={{width: 317}} id="standard-basic" label="Contributors" variant="standard"/>
+                    <TextField
+                        sx={{width: 317}}  variant="standard"
+                        name="contributors"
+                        label="Contributors"
+                        value={formik.values.contributors}
+                        onChange={formik.handleChange}
+                        error={formik.touched.contributors && Boolean(formik.errors.contributors)}
+                        helperText={formik.touched.contributors && formik.errors.contributors}
+                        required
+                    />
                 </div>
                 <Typography align="left" sx={{paddingTop: 3, textDecoration: 'underline'}}>
                     Select a Date
@@ -65,7 +97,7 @@ const TimelineEntry = () => {
                 <CategoriesMultiSelect categories={categories} setCategories={setCategories}/>
                 <div>
                     <Button
-                        onClick={handleSubmit}
+                        onClick={formik.handleSubmit}
                         variant="outlined" style={{
                         backgroundColor: "#1E5487",
                         color: "white",

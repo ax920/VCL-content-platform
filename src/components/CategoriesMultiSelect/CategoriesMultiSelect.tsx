@@ -8,26 +8,24 @@ const CategoriesMultiSelect = ({categories, setCategories}) => {
     //TODO replace dummy categories
     const dummyCategories = [{ // dummy categories
         name: "Workshops",
-        id: 1
     },
         {
             name: "Conditions",
-            id: 2
+
         }, {
             name: "Hiring",
-            id: 3
+
         }, {
             name: "Meetings",
-            id: 4
+
         }, {
             name: "Guest Speaker",
-            id: 5
+
         }, {
             name: "Resources",
-            id: 6
+
         },
     ]
-
 
     return (
         <Autocomplete
@@ -37,7 +35,7 @@ const CategoriesMultiSelect = ({categories, setCategories}) => {
             multiple
             filterSelectedOptions
             // @ts-ignore
-            getOptionSelected={(option, value) => option.name === value.name}
+            isOptionEqualToValue={(option, value) => option.name === value.name}
             // @ts-ignore
             onChange={(event, value) => setCategories(value)}
             ChipProps={{
@@ -47,7 +45,6 @@ const CategoriesMultiSelect = ({categories, setCategories}) => {
                     color: "#fff",
                 }
             }}
-            id="tags-standard"
             options={dummyCategories}
             getOptionLabel={option => option.name}
             renderInput={params => (
@@ -59,7 +56,6 @@ const CategoriesMultiSelect = ({categories, setCategories}) => {
                     variant="outlined"
                     label="Categories"
                     required={categories.length === 0}
-                    id="custom-css-outlined-input"
                 />
             )}
         />

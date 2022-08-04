@@ -21,7 +21,6 @@ const ProjectsMultiSelect = ({project, setProject}) => {
             name: "Dormant"
         }]
 
-
     return (
         <Autocomplete
             multiple
@@ -41,19 +40,17 @@ const ProjectsMultiSelect = ({project, setProject}) => {
                     color: "#fff",
                 }
             }}
-            id="tags-standard"
             options={project.length === 0 ? dummyProjects : []}
             getOptionLabel={option => option.name}
             renderInput={params => (
                 <TextField
-                    required={project.length === 0}
+                    required
                     {...params}
                     style={{
                         borderRadius: "10px",
                     }}
                     variant="outlined"
                     label="Projects"
-                    id="custom-css-outlined-input"
                 />
             )}
         />
