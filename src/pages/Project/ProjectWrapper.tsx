@@ -35,7 +35,7 @@ const ProjectWrapper: React.FC<ProjectProps> = ({match}) => {
         name: "Correlation"
     },
         {
-            name: "Nova"
+            name: "NOVA"
         }, {
             name: "Perceptual Modes"
         }, {
@@ -44,6 +44,9 @@ const ProjectWrapper: React.FC<ProjectProps> = ({match}) => {
             name: "IT"
         }, {
             name: "Dormant"
+        },
+         {
+            name: "Image Transitions"
         }]
 
     const curr_project: any = projects.find(project => project.name === match.params.project_id)

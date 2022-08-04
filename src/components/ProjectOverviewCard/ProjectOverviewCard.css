@@ -1,0 +1,17 @@
+.project-button {
+    background-color: #AEC7E3;
+    width: 12em;
+    height: 7.5em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border: none;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.project-button:hover {
+    background-color: #1C426D;
+    cursor: pointer;
+}
