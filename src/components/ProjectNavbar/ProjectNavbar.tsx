@@ -67,7 +67,6 @@ export default function Sidebar(props: any) {
     return (
         <Box sx={{display: 'flex'}}>
             <CssBaseline/>
-
             <Toolbar>
                 <IconButton
                     color="inherit"
@@ -81,8 +80,6 @@ export default function Sidebar(props: any) {
             </Toolbar>
 
             <Drawer
-
-                PaperProps={{ style: { height: 'calc(100% - 64px)', top: 64} }}
                 sx={{
                     width: drawerWidth,
                     flexShrink: 0,
