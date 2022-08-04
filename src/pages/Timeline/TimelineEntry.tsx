@@ -13,7 +13,7 @@ import {validationSchema} from "../../Validation/TimelineEntryValidation";
 const TimelineEntry = () => {
 
     const [date, setDate] = useState(new Date())
-    const [project, setProject] = useState("")
+    const [project, setProject] = useState([])
     const [categories, setCategories] = useState([]);
 
     const handleSubmit = (values: any) => {
