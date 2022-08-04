@@ -1,6 +1,6 @@
 import TextField from "@mui/material/TextField";
-import {Autocomplete} from "@material-ui/lab";
 import React from "react";
+import {Autocomplete} from "@mui/material";
 
 // @ts-ignore
 const ProjectsMultiSelect = ({project, setProject}) => {
@@ -21,6 +21,7 @@ const ProjectsMultiSelect = ({project, setProject}) => {
             name: "Dormant"
         }]
 
+
     return (
         <Autocomplete
             multiple
@@ -29,6 +30,7 @@ const ProjectsMultiSelect = ({project, setProject}) => {
                 paddingBottom: 30,
             }}
             filterSelectedOptions
+            // @ts-ignore
             getOptionSelected={(option, value) => option.name === value.name}
             // @ts-ignore
             onChange={(event, value) => setProject(value)}

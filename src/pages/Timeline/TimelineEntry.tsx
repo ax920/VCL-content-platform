@@ -2,7 +2,6 @@ import {Button, Typography} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import React, {useState} from 'react';
 import DatePicker from "@components/DatePicker/DatePicker";
-
 import Box from "@mui/material/Box";
 import {ROUTES} from "@statics";
 import ProjectsMultiSelect from "@components/ProjectsMultiSelect/ProjectsMultiSelect";

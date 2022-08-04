@@ -1,7 +1,6 @@
 import TextField from "@mui/material/TextField";
-import {Autocomplete} from "@material-ui/lab";
 import React from "react";
-
+import {Autocomplete} from "@mui/material";
 
 // @ts-ignore
 const CategoriesMultiSelect = ({categories, setCategories}) => {
@@ -29,6 +28,7 @@ const CategoriesMultiSelect = ({categories, setCategories}) => {
         },
     ]
 
+
     return (
         <Autocomplete
             style={{
@@ -36,6 +36,7 @@ const CategoriesMultiSelect = ({categories, setCategories}) => {
             }}
             multiple
             filterSelectedOptions
+            // @ts-ignore
             getOptionSelected={(option, value) => option.name === value.name}
             // @ts-ignore
             onChange={(event, value) => setCategories(value)}
