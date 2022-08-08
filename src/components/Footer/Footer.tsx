@@ -8,7 +8,7 @@ const Footer = () => {
         name: "Correlation"
     },
         {
-            name: "Nova"
+            name: "NOVA"
         }, {
             name: "Perceptual Modes"
         }, {
