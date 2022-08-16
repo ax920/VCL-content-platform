@@ -2,6 +2,7 @@ import React from 'react';
 import {TEXT, NAV, ROUTES} from '@statics';
 import GenericLink from '@components/generics/Link';
 import './Footer.css'
+import constants from "@statics/constants";
 
 const Footer = () => {
     const projects = [{
@@ -25,7 +26,7 @@ const Footer = () => {
             <div className="footer">
                 <div className="footer-main">
                     <div className="footer-left">
-                        <img src="https://res.cloudinary.com/dhp7dbfmf/image/upload/v1660613822/gr6bjcqwqmyubofqvfrs.png" className="ubc-logo" alt={'UBC logo'}/>
+                        <img src={constants.UBC_LOGO_URL} className="ubc-logo" alt={'UBC logo'}/>
 
                         <div className="footer-column-lab-info">
                             <li className="footer-link"><b>Tel</b> {TEXT.LAB_INFO.TEL}</li>
