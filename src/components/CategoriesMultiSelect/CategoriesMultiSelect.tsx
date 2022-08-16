@@ -2,8 +2,10 @@ import TextField from "@mui/material/TextField";
 import React from "react";
 import {Autocomplete} from "@mui/material";
 
-// @ts-ignore
-const CategoriesMultiSelect = ({categories, setCategories}) => {
+const CategoriesMultiSelect = ({categories, setCategories}: {
+    categories: { name: string }[],
+    setCategories: React.Dispatch<React.SetStateAction<{ name: string }[]>>
+}) => {
 
     //TODO replace dummy categories
     const dummyCategories = [{ // dummy categories
@@ -34,9 +36,7 @@ const CategoriesMultiSelect = ({categories, setCategories}) => {
             }}
             multiple
             filterSelectedOptions
-            // @ts-ignore
             isOptionEqualToValue={(option, value) => option.name === value.name}
-            // @ts-ignore
             onChange={(event, value) => setCategories(value)}
             ChipProps={{
                 style: {

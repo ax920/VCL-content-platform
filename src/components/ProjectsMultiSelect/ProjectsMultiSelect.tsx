@@ -2,8 +2,10 @@ import TextField from "@mui/material/TextField";
 import React from "react";
 import {Autocomplete} from "@mui/material";
 
-// @ts-ignore
-const ProjectsMultiSelect = ({project, setProject}) => {
+const ProjectsMultiSelect = ({project, setProject}: {
+    project: { name: string }[], setProject:
+        React.Dispatch<React.SetStateAction<{ name: string }[]>>
+}) => {
 
     //TODO replace dummy projects
     const dummyProjects = [{
@@ -29,9 +31,7 @@ const ProjectsMultiSelect = ({project, setProject}) => {
                 paddingBottom: 30,
             }}
             filterSelectedOptions
-            // @ts-ignore
-            getOptionSelected={(option, value) => option.name === value.name}
-            // @ts-ignore
+            isOptionEqualToValue={(option, value) => option.name === value.name}
             onChange={(event, value) => setProject(value)}
             ChipProps={{
                 style: {
