@@ -25,7 +25,7 @@ const Footer = () => {
             <div className="footer">
                 <div className="footer-main">
                     <div className="footer-left">
-                        <img src="https://res.cloudinary.com/dhp7dbfmf/image/upload/v1660613822/gr6bjcqwqmyubofqvfrs.png" className="ubc-logo"/>
+                        <img src="https://res.cloudinary.com/dhp7dbfmf/image/upload/v1660613822/gr6bjcqwqmyubofqvfrs.png" className="ubc-logo" alt={'UBC logo'}/>
 
                         <div className="footer-column-lab-info">
                             <li className="footer-link"><b>Tel</b> {TEXT.LAB_INFO.TEL}</li>
