@@ -5,6 +5,7 @@ const constants = {
   MODALS: {
     LOGIN: 'login',
   },
+  UBC_LOGO_URL: 'https://res.cloudinary.com/dhp7dbfmf/image/upload/v1660613822/gr6bjcqwqmyubofqvfrs.png',
 } as const;
 
 export default constants;
