@@ -38,18 +38,21 @@ const Project: React.FC<ProjectProps> = ({match}) => {
             involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
             description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
             email='mellio10@psych.ubc.ca'
+            isCurrentMember={false}
         />
         <Person 
             name="Robinson John"
             involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
             description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
             email='mellio10@psych.ubc.ca'
+            isCurrentMember={false}
         />
         <Person 
             name="Kevin Peng"
             involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
             description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
             email='mellio10@psych.ubc.ca'
+            isCurrentMember={false}
         />
     </div>
     );

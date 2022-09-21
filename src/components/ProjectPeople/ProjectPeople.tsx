@@ -9,16 +9,19 @@ interface PersonDetails {
     involvement: string,
     description: string,
     email: string,
+    isCurrentMember: boolean, // if person is current member or alumni
     edit?: () => void;
     delete?: () => void;
 }
 
 export const Person: React.FC<PersonDetails> = (props) => {
+    let alumniTag = '<div style="border:1px solid blue; color: blue;">Alumni</div>';
     return (
         <div className="card">
             <div className="card__header">
                 <h1 className="card__title">{ props.name }</h1>
                 <div className="card__header__icons">
+                    {props.isCurrentMember ? alumniTag + '<h3 className="icon icon--spacer">|</h3>': ''}
                     <EditIcon 
                         className="icon" 
                         onClick={props.edit}
