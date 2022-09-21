@@ -25,15 +25,26 @@ const ProjectTeam: React.FC<ProjectProps> = (props) => {
                     <h3 className='btn__title'>add member</h3>
                 </button>
             </div>
-            <div className="card-wrapper">
+            <div>
             <Person 
                 name="Kevin Peng"
                 involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
                 description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
                 email='mellio10@psych.ubc.ca'
+                phone='604 000 0000'
+                linkedIn='linkedin.com'
                 isCurrentMember={true}
             />
-            </div>
+            <Person 
+            name="Maddison Eliot"
+            involvement='Project Lead, Graduate Student, Coding Team Manager, Analytics Manager'
+            description='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum explicabo reprehenderit optio amet ab temporibus asperiores quasi cupiditate. Voluptatum ducimus voluptates voluptas?'
+            email='mellio10@psych.ubc.ca'
+            phone='604 000 0000'
+            linkedIn='linkedin.com'
+            isCurrentMember={false}
+        />
+        </div>
         </div>
     )
 };

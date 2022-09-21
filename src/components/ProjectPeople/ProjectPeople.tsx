@@ -2,6 +2,8 @@ import React from "react"
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './ProjectPeople.css'
 
 interface PersonDetails {
@@ -9,35 +11,56 @@ interface PersonDetails {
     involvement: string,
     description: string,
     email: string,
+    phone: string,
+    linkedIn: string,
     isCurrentMember: boolean, // if person is current member or alumni
     edit?: () => void;
     delete?: () => void;
 }
 
 export const Person: React.FC<PersonDetails> = (props) => {
-    let alumniTag = '<div style="border:1px solid blue; color: blue;">Alumni</div>';
     return (
-        <div className="card">
+        <div className="person-card">
             <div className="card__header">
-                <h1 className="card__title">{ props.name }</h1>
+                <h1 className="card__title">{props.name}</h1>
                 <div className="card__header__icons">
-                    {props.isCurrentMember ? alumniTag + '<h3 className="icon icon--spacer">|</h3>': ''}
-                    <EditIcon 
-                        className="icon" 
-                        onClick={props.edit}
-                    />
-                    <h3 className="icon icon--spacer">|</h3>
-                    <DeleteIcon
-                        className="icon" 
-                        onClick={props.delete}
-                    />
-                </div>
+                {(() => {
+                        if (props.isCurrentMember) {
+                            return (
+                                <span id="alumni-tag">Alumni</span>
+                            )
+                        }
+                })()}
+                {(() => {
+                        if (props.isCurrentMember) {
+                            return (
+                                <h3 className="icon icon--spacer">|</h3>
+                            )
+                        }
+                })()}
+                <EditIcon
+                    className="icon"
+                    onClick={props.edit} />
+                <h3 className="icon icon--spacer">|</h3>
+                <DeleteIcon
+                    className="icon"
+                    onClick={props.delete} />
             </div>
-            <h2 className="card__subtitle card__subtitle--involvement">{ props.involvement }</h2>
-            <p className="card__text">{ props.description }</p>
-            <div className="card__email">
-                <EmailIcon className="icon icon--email" />
-                <a href={`mailto:${props.email}`} className="card__subtitle card__subtitle--email">{ props.email }</a>
+        </div><h2 className="card__subtitle card__subtitle--involvement">{props.involvement}</h2><p className="card__text">{props.description}</p><div className="card__email">
+                <div id="contact-container">
+                    <div className="contact-el">
+                        <EmailIcon className="icon icon--contact" />
+                        <a href={`mailto:${props.email}`} className="card__subtitle card__subtitle--email">{props.email}</a>
+                    </div>
+                    <div className="contact-el">
+                        <PhoneIcon className="icon icon--contact" />
+                        <a href={`tel:${props.phone}`} className="card__subtitle card__subtitle--email">{props.phone}</a>
+                    </div>
+                    <div className="contact-el">
+                        <LinkedInIcon className="icon icon--contact" />
+                        <a href={`${props.linkedIn}`} className="card__subtitle card__subtitle--email">{props.linkedIn}</a>
+                    </div>
+                </div>
             </div>
         </div>
     )

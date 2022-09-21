@@ -13,7 +13,6 @@ body {
     display: flex;
     padding: 1em;
     height: 100vh;
-    flex-wrap: wrap;
     position: relative;
     flex-direction: column;
     margin: 0%;
