@@ -6,17 +6,13 @@ on:
   pull_request:
     branches: [ main ]
 
-# strategy:
-#   matrix:
-#     node-version: [12.x, 14.x, 15.x, 16.x]
-
 jobs: 
   run_eslint:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x, 14.x, 16.1.0]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
