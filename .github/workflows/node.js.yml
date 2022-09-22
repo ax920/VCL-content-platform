@@ -2,9 +2,9 @@ name: linting check
 
 on: 
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ arpit/pr-workflow-new ]
+  pull_request:
+    branches: [ main ]
 
 jobs: 
   run_eslint:
