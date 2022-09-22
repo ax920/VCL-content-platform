@@ -9,8 +9,13 @@
 ## Checklist
 
 - [ ] Ran `npm run lint:fix` to format code
-- [ ] Connected PR to Trello ticket (steps below)
 - [ ] Requested at least one reviewer
+- [ ] Connected PR to Trello ticket (steps below)
+- [ ] Addressed code review comments
+- [ ] Gained at least one approval for your PR
 
-Connecting your PR to the corresponding ticket:
-You will see a "GitHub" button on the right side of your ticket, click this -> Attach PR -> VCL-content-platform-server -> find your PR from the dropdown.
+## Connecting your PR to the corresponding ticket:
+- Click on the "GitHub" button found on the right of your Trello ticket
+- Choose "Attach PR" from the dropdown list
+- Link your GitHub account (if you haven't done so already)
+- Navigate to`VCL-content-platform` and choose your PR from the dropdown. 

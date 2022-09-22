@@ -2,7 +2,7 @@ name: linting check
 
 on: 
   push:
-    branches: [ arpit/pr-workflow-new ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
