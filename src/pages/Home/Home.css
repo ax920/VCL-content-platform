@@ -6,3 +6,125 @@
     max-width: 100%;
     position: relative;
 }
+
+/* mission statement section */
+.mission-statement-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 0.025em;
+    padding-top: 125px;
+}
+
+.mission-statement-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 75%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.title-underline {
+    max-width: 100%; 
+    width: 7em;
+    border-bottom: 1px solid #77B0F3; 
+    line-height: 0.1em;
+    margin: -15px 20em 1.25em; 
+}
+
+.mission-statement {
+    text-align: center;
+}
+
+.mission-img-container {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mission-img-placeholder-one {
+    margin-left: 20px;
+    background: #DAE2E4;
+    border-radius: 8px;
+    padding: 10px;
+    width: 376px;
+    height: 263px;
+}
+
+.mission-img-placeholder-two {
+    margin-left: 20px;
+    background: #CBD6DC;
+    border-radius: 8px;
+    padding: 10px;
+    width: 376px;
+    height: 263px;
+}
+
+.footer-divider {
+    width: 225px;
+    border-bottom: 2px solid #7C9DAF; 
+    margin-left: 40%;
+    margin-bottom: 3rem;
+    margin-top: -10px;
+}
+
+.mission-statement-footer {
+    margin-top: 100px;
+    padding: 70px 190px 50px;
+    background-color: #D9E3E7;
+    text-align: relative;
+    font-size: 14px;
+    letter-spacing: 0.035em;
+}
+
+@media (max-width:1025px){
+    .card-container {
+        overflow-y: hidden !important;
+    }
+
+    .mission-statement {
+        text-align: center;
+    }
+
+    .mission-statement-container {
+        padding-left: 27%;
+        padding-right: 27%;
+        margin-left: 25%;
+        margin-bottom: 5%;
+    }
+
+    .mission-img-container {
+        flex-direction: column;
+        margin-top: -10px;
+    }
+
+    .mission-img-placeholder-one {
+        margin-left: 52%;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 200px;
+    }
+
+    .mission-img-placeholder-two {
+        margin-left: 52%;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 200px;
+    }
+
+    .footer-divider {
+        width: 200px;
+        margin-left: 15%;
+    }
+
+    .mission-statement-footer {
+        padding-left: 28%;
+        padding-right: 28%;
+        margin-left: 25%;
+        margin-bottom: 5%;
+    }
+}
