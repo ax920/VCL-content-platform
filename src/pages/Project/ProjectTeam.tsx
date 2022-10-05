@@ -18,7 +18,7 @@ const ProjectTeam: React.FC<ProjectProps> = (props) => {
                 <ProjectBreadcrumbs project_name={props.project.name} page_name={TEXT.PROJECT_NAV.TEAM} /> 
             </div>
             <div className="team-header">Team Members</div>
-            <hr></hr>
+            <hr/>
             <div className='button_container'>
                 <button className='btn btn--add-member'>
                     <AddIcon className="icon icon--plus" />

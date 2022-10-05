@@ -12,7 +12,6 @@ body {
     width: 85%;
     display: flex;
     padding: 1em;
-    height: 100vh;
     position: relative;
     flex-direction: column;
     margin: 0%;

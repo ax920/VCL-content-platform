@@ -27,14 +27,10 @@ export const Person: React.FC<PersonDetails> = (props) => {
                 {(() => {
                         if (props.isCurrentMember) {
                             return (
+                                <>
                                 <span id="alumni-tag">Alumni</span>
-                            )
-                        }
-                })()}
-                {(() => {
-                        if (props.isCurrentMember) {
-                            return (
                                 <h3 className="icon icon--spacer">|</h3>
+                                </>
                             )
                         }
                 })()}
@@ -46,19 +42,19 @@ export const Person: React.FC<PersonDetails> = (props) => {
                     className="icon"
                     onClick={props.delete} />
             </div>
-        </div><h2 className="card__subtitle card__subtitle--involvement">{props.involvement}</h2><p className="card__text">{props.description}</p><div className="card__email">
+        </div><h2 className="card__subtitle card__subtitle--involvement">{props.involvement}</h2><p className="card__text">{props.description}</p><div className="card__contact">
                 <div id="contact-container">
-                    <div className="contact-el">
+                    <div className="contact-info-row">
                         <EmailIcon className="icon icon--contact" />
-                        <a href={`mailto:${props.email}`} className="card__subtitle card__subtitle--email">{props.email}</a>
+                        <a href={`mailto:${props.email}`} className="card__subtitle card__subtitle--contact">{props.email}</a>
                     </div>
-                    <div className="contact-el">
+                    <div className="contact-info-row">
                         <PhoneIcon className="icon icon--contact" />
-                        <a href={`tel:${props.phone}`} className="card__subtitle card__subtitle--email">{props.phone}</a>
+                        <a href={`tel:${props.phone}`} className="card__subtitle card__subtitle--contact">{props.phone}</a>
                     </div>
-                    <div className="contact-el">
+                    <div className="contact-info-row">
                         <LinkedInIcon className="icon icon--contact" />
-                        <a href={`${props.linkedIn}`} className="card__subtitle card__subtitle--email">{props.linkedIn}</a>
+                        <a href={`${props.linkedIn}`} className="card__subtitle card__subtitle--contact">{props.linkedIn}</a>
                     </div>
                 </div>
             </div>
