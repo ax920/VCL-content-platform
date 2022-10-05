@@ -6,3 +6,11 @@
     max-width: 100%;
     position: relative;
 }
+
+.Home {
+    font-family: 'Source Sans Pro';
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
