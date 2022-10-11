@@ -1,0 +1,48 @@
+body {
+    width: 100%;
+}
+
+.content-container {
+    width: 100%;
+    justify-content: center;
+}
+
+.project-team {
+    max-width: 100%;
+    width: 85%;
+    display: flex;
+    padding: 1em;
+    position: relative;
+    flex-direction: column;
+    margin: 0%;
+}
+
+.team-header {
+    font-weight: 700;
+    color: #1c426d;
+    font-family: 'Source Sans Pro';
+    font-size: 33.05px;
+    line-height: 42px;
+    display: flex;
+    align-items: left;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+hr {
+    border-left: 10px solid #8ea9d2;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.button_container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    max-height: 31px;
+    justify-content: flex-end;
+    width: 100%;
+
+}
