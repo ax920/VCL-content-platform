@@ -6,7 +6,7 @@ import Card from "@components/Card";
 const LandingPage = () => {
     return (
       <div>
-        <div id="top-section">
+        <div id="landing-page-container">
             <div id="info-section">
                 <div id="title">
                     {TEXT.LANDING_PAGE.TITLE}
@@ -20,14 +20,8 @@ const LandingPage = () => {
                     </a>
                 </div>
             </div>
-            {/*placeholder for image*/}
-        </div>
-        <div id="card-section">
-            <div className="card-container">
-                <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
-                <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
-                <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
-                <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
+            <div id="landing-page-img-container">
+                <div id="landing-page-img-placeholder"></div>
             </div>
         </div>
     </div>

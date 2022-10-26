@@ -1,14 +1,16 @@
-#top-section {
+#landing-page-container {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    max-width: 90%;
+    justify-content: center;
+    max-width: 100%;
 }
 
 #info-section {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    max-width: 40%;
+    flex: 1;
+    margin-top: 5%;
+    margin-right: 3%;
 }
 
 #title {
@@ -19,6 +21,7 @@
     letter-spacing: 0.035em;
     line-height: 56px;
     display: flex;
+    text-align: left;
 }
 
 #lab-description {
@@ -27,6 +30,8 @@
     line-height: 24px;
     letter-spacing: 0.04em;
     display: flex;
+    text-align: left;
+    margin-top: 15px;
 }
 
 .btn_ubc_home {
@@ -41,8 +46,56 @@
     color: #ffffff;
     text-align: center;
     padding-bottom: 6px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-#card-section {
+#landing-page-img-container {
+    margin-top: 75px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+#landing-page-img-placeholder {
+    background: #C4C4C4;
+    padding: 10px;
+    width: 491px;
+    height: 296px;
+    flex: 1;
+}
+
+@media (max-width:1025px){
+    #landing-page-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #info-section {
+        margin: auto;
+        justify-content: center;
+        max-width: 70%;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    .btn_ubc_home {
+        margin-left: 30px;
+    }
+    
+    #lab-description {
+        text-align: center;
+    }
+
+    #landing-page-img-container {
+        margin: auto;
+        margin-top: 50px;
+        justify-content: center;
+        overflow: hidden;
+    }
 }

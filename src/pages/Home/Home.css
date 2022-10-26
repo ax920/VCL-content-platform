@@ -38,7 +38,7 @@
     width: 7em;
     border-bottom: 1px solid #77B0F3; 
     line-height: 0.1em;
-    margin: -15px 20em 1.25em; 
+    margin: 3px 20em 1.25em; 
 }
 
 .mission-statement {
@@ -98,40 +98,48 @@
     }
 
     .mission-statement-container {
-        padding-left: 27%;
-        padding-right: 27%;
-        margin-left: 25%;
         margin-bottom: 5%;
+        justify-content: center;
     }
 
     .mission-img-container {
         flex-direction: column;
+        display: flex;
         margin-top: -10px;
+        justify-content: center;
     }
 
     .mission-img-placeholder-one {
-        margin-left: 52%;
         margin-bottom: 20px;
+        align-self: center;
         width: 300px;
         height: 200px;
     }
 
     .mission-img-placeholder-two {
-        margin-left: 52%;
         margin-bottom: 20px;
+        align-self: center;
         width: 300px;
         height: 200px;
     }
 
     .footer-divider {
         width: 200px;
-        margin-left: 15%;
+        margin-left: 28%;
+        align-self: center;
     }
 
     .mission-statement-footer {
-        padding-left: 28%;
-        padding-right: 28%;
-        margin-left: 25%;
         margin-bottom: 5%;
+        justify-content: center;
+        align-self: center;
+    }
+}
+
+@media (max-width:750px){
+    .footer-divider {
+        width: 200px;
+        margin-left: 8%;
+        align-self: center;
     }
 }
