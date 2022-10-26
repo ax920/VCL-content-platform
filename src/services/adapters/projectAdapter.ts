@@ -14,3 +14,12 @@ export const callGetAllProjectsAPI = async (): Promise<ProjectResponse> => {
         return err.response.data as BaseResponse;
     }
 }
+
+export const callGetProjectByNameAPI = async (name: string): Promise<[ProjectResponse, boolean]> => {
+    try {
+        const res = await projectAPI.getProjectByName(name);
+        return [res.data as ProjectResponse, false];
+    } catch (err: any) {
+        return [err.response.data as BaseResponse, true];
+    }
+}
