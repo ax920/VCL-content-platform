@@ -1,6 +1,11 @@
+* {
+  /* border: 2px solid red; */
+  /* overflow: auto; */
+}
 .App {
   text-align: center;
   width: 100% !important;
+  min-height: 100vh;
 }
 
 #root {

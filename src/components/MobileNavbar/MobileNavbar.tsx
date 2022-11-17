@@ -26,6 +26,7 @@ const MobileNavbar = () => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     const handleMenuClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+        console.log("clicked")
         setAnchorEl(event.currentTarget);
     };
     const handleMenuClose = () => {
@@ -33,6 +34,7 @@ const MobileNavbar = () => {
     };
     
     const handleOpenLoginModal = () => {
+        console.log("clicked!!")
         dispatch(
         appActions.openModal({
             key: CONSTANTS.MODALS.LOGIN,

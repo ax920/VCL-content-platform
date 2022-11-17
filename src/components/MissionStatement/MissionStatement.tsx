@@ -6,7 +6,7 @@ const MissionStatement = () => {
     return (
 
       <div className="mission-statement-footer">
-        <hr className="footer-divider"/>
+        <div className="footer-divider"></div>
         <p>{TEXT.LANDING_PAGE.MISSION_STATEMENT.LAB_GOALS}</p>
       </div>
 

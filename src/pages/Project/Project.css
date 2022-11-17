@@ -20,7 +20,7 @@
 .btn--add-member {
     position: relative;
     border: none;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .btn--add-member::before {
