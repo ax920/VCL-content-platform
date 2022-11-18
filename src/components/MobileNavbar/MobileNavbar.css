@@ -8,11 +8,9 @@
 .mobile-header {
     position: fixed;
     height: 132px;
-    width: 100vw !important;
     padding-top: 15px;
 	  margin-bottom: 30px;
     background-color: #F8F8F8 !important;
-    left: 0  !important;
 }
 
 .title {
