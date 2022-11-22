@@ -7,9 +7,9 @@
 .button-container {
     margin-top: 2em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px , 1fr));
     gap: 24px;
-    justify-items: center;
+    justify-items: stretch;
     margin-bottom: 32px;
 }
 
@@ -21,6 +21,6 @@
 hr {
     background-color: #8EA9D2;
     width: 100%;
-    height: 2px;
+    height: 1px;
 }
 

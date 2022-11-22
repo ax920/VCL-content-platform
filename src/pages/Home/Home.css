@@ -1,4 +1,4 @@
-.some-section {
+.card-section {
     width: min(80%, 1000px);
     margin: 0 auto;
 }
@@ -39,7 +39,7 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #7C9DAF;
+    background-color: #77B0F3;
 }
 
 .mission-statement {

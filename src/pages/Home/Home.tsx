@@ -10,7 +10,7 @@ const Home: React.FC<HomeProps> = (props) => {
   return (
     <div>
       <div>HI THIS IS THE LANDING PAGE</div>
-      <section className="some-section">
+      <section className="card-section">
         <div className="card-container">
           <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />
           <Card title="Card Title" desc="Description of how the lab can help COGS students with this project" />

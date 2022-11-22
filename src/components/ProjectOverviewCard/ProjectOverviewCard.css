@@ -1,10 +1,10 @@
 .project-button {
     background-color: #AEC7E3;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 5 / 3;
     border: none;
     color: white;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
     transition: background-color 0.3s;
