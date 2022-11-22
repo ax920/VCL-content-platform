@@ -91,17 +91,17 @@ h3 {
     max-width: 100%;
 }
 
-.About ul {
+.About .main-body ul {
     list-style: none;
     margin-left: 32px;
 }
 
-.About ul li {
+.About .main-body ul li {
     position: relative;
     margin: 8px 0;
 }
 
-.About ul li::before {
+.About .main-body ul li::before {
     content: "";
     position: absolute;
     width: 20px;
@@ -147,6 +147,11 @@ h3 {
 
 .contact-info h2 {
     margin-top: 0;
+}
+
+.contact-info ul {
+    margin-top: 8px;
+    margin-left: 16px;
 }
 
 .contact-info ul li {
