@@ -121,10 +121,14 @@ h3 {
 }
 
 .gain-section {
-    width: 80%;
-    margin: 48px auto;
+    padding: 48px 10%;
     background-color: #FFFFFF;
     color: #3f3f3f;
+}
+
+.gain-section h2 {
+    text-align: center;
+    margin-top: 0;
 }
 
 .contact {
