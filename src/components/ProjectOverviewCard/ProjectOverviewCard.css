@@ -1,14 +1,13 @@
 .project-button {
     background-color: #AEC7E3;
-    width: 12em;
-    height: 7.5em;
-    margin-right: 1em;
-    margin-bottom: 1em;
+    width: 100%;
+    aspect-ratio: 5 / 3;
     border: none;
     color: white;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
 .project-button:hover {

@@ -27,8 +27,9 @@ const Footer = () => {
                 <div className="footer-main">
 
                     <div className="footer-left">
-                        <img src={constants.UBC_LOGO_URL} className="ubc-logo" alt={'UBC logo'}/>
-
+                        <div className="footer-image-container">
+                            <img src={constants.UBC_LOGO_URL} className="ubc-logo" alt={'UBC logo'}/>
+                        </div>
                         <div className="footer-column-lab-info">
                             <li className="footer-contact-item"><b>{TEXT.LAB_INFO.TEL_TEXT + ':'}</b> {TEXT.LAB_INFO.TEL}</li>
                             <li className="footer-contact-item"><b>{TEXT.LAB_INFO.FAX_TEXT + ':'}</b> {TEXT.LAB_INFO.FAX}</li>

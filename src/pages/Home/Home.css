@@ -1,37 +1,45 @@
+.card-section {
+    width: min(80%, 1000px);
+    margin: 0 auto;
+}
+
 .card-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 8px;
     flex-wrap: wrap;
-    margin: 4%;
-    max-width: 100%;
-    position: relative;
+    width: 100%;
 }
 
 /* mission statement section */
+
+.mission-statement-container {
+    width: min(80%, 1000px);
+    margin: 48px auto;
+}
+
 .mission-statement-title {
     text-align: center;
     font-weight: 700;
     font-size: 2em;
     letter-spacing: 0.025em;
-    padding-top: 125px;
+    position: relative;
+    margin: 32px 0;
+    padding: 16px 0;
 }
 
-.mission-statement-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-width: 75%;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
+.mission-statement-text p + p {
+    margin-top: 16px;
 }
 
 .title-underline {
-    max-width: 100%; 
-    width: 7em;
-    border-bottom: 1px solid #77B0F3; 
-    line-height: 0.1em;
-    margin: -15px 20em 1.25em; 
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #77B0F3;
 }
 
 .mission-statement {
@@ -39,63 +47,50 @@
 }
 
 .mission-img-container {
-    margin-top: 75px;
+    width: 65%;
+    margin: 48px auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    overflow: hidden;
+    gap: 24px;
 }
 
 .mission-img-placeholder-one {
-    margin-left: 20px;
+    width: 80%;
+    aspect-ratio: 5 / 3;
+    margin: 0 auto;
     background: #DAE2E4;
     border-radius: 8px;
-    padding: 10px;
-    width: 376px;
-    height: 263px;
 }
 
 .mission-img-placeholder-two {
-    margin-left: 20px;
+    width: 80%;
+    aspect-ratio: 5 / 3;
+    margin: 0 auto;
     background: #CBD6DC;
     border-radius: 8px;
-    padding: 10px;
-    width: 376px;
-    height: 263px;
 }
 
-@media (max-width:1025px){
-    .card-container {
-        overflow-y: hidden !important;
-    }
-
-    .mission-statement {
-        text-align: center;
-    }
-
+@media (max-width:1023px){
     .mission-statement-container {
-        padding-left: 27%;
-        padding-right: 27%;
-        margin-left: 25%;
-        margin-bottom: 5%;
+        width: 80%;
+        margin: 48px auto;
+    }
+
+    .mission-statement-title {
+        font-size: 1.5rem;
     }
 
     .mission-img-container {
+        width: 80%;
+    }
+}
+
+@media (max-width:767px) {
+    .mission-img-container {
+        width: 100%;
         flex-direction: column;
-        margin-top: -10px;
     }
 
-    .mission-img-placeholder-one {
-        margin-left: 52%;
-        margin-bottom: 20px;
-        width: 300px;
-        height: 200px;
-    }
-
-    .mission-img-placeholder-two {
-        margin-left: 52%;
-        margin-bottom: 20px;
-        width: 300px;
-        height: 200px;
+    .title-underline {
+        width: 40%;
     }
 }
