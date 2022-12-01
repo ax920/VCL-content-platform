@@ -1,7 +1,6 @@
 
 body{
     max-width: 100%;
-    overflow-x: hidden;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -18,6 +17,15 @@ body{
     padding-bottom: -2000px;
 }
 
+.About p + p,
+.About ul + p {
+    margin-top: 12px;
+}
+
+section {
+    margin: 2em 0;
+}
+
 .header {
     position: relative;
     top: 3.68%;
@@ -27,6 +35,38 @@ body{
     line-height: 48px;
     font-weight: 700;
     max-width: 100%;
+}
+
+.sub-header {
+    color: #535353;
+    margin-top: 8px;
+}
+
+h1 {
+    font-weight: 700;
+    font-family: 'Open Sans';
+    font-size: 35px;
+    max-width: 100%;
+}
+
+h2 {
+    text-align: left;
+    font-family: 'Source Sans Pro' !important;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0.8em 0;
+}
+
+h3 {
+    font-size: 16px;
+    color: #000000;
+    max-width: 100%;
+}
+
+.main-body {
+    text-align: left;
+    width: min(80%, 1000px);
+    margin: 48px auto;
 }
 
 .announcements {
@@ -51,81 +91,91 @@ body{
     max-width: 100%;
 }
 
-.main_body {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    padding-left: 130px;
-    padding-right: 130px;
-    text-align: left;
-    max-width: 100%;
-    position: relative;
+.About .main-body ul {
+    list-style: none;
+    margin-left: 32px;
 }
 
-.gain_section {
+.About .main-body ul li {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 40px;
-    gap: 10px;
-    width: 100%;
+    margin: 8px 0;
+}
+
+.About .main-body ul li::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    left: -32px;
+    top: 2px;
+}
+
+.responsability-list li::before { 
+    background-image: url("task.png");   
+}
+
+.value-list li::before { 
+    background-image: url("tick.png");   
+}
+
+.gain-section {
+    padding: 48px 10%;
     background-color: #FFFFFF;
     color: #3f3f3f;
-    max-width: 100%;
 }
 
-.gain_box {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    box-shadow: 4px 6px 13px -1px rgba(225, 225, 225, 0.25);
-    border-radius: 2px;
-    text-align: left;
-    max-width: 100%;
+.gain-section h2 {
+    text-align: center;
+    margin-top: 0;
 }
 
 .contact {
-    padding-top: 70px;
-    padding-bottom: 70px;
-    padding-left: 130px;
-    padding-right: 130px;
+    width: 80%;
+    margin: 48px auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 24px;
+}
+
+.map-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-info {
     text-align: left;
-    position: relative;
-    max-width: 100%;
 }
 
-.map {
-    width: 30%;
-    position: relative;
-    height: 85%;
+.contact-info h2 {
+    margin-top: 0;
 }
 
-h1 {
-    font-weight: 700;
-    font-family: 'Open Sans';
-    font-size: 35px;
-    max-width: 100%;
+.contact-info ul {
+    margin-top: 8px;
+    margin-left: 16px;
 }
 
-h2 {
-    text-align: left;
-    font-family: 'Source Sans Pro' !important;
-    font-weight: 600;
-    font-size: 24px;
-    color: #000000;
-    max-width: 100%;
+.contact-info ul li {
+    margin: 0;
 }
 
-h3 {
-    font-size: 16px;
-    color: #000000;
-    max-width: 100%;
+@media (max-width: 1023px) {
+    .main-body {
+        width: 90%;
+    }
+    .gain-section {
+        padding: 48px 5%;
+    }
+    .contact {
+        width: 90%;
+    }
 }
 
-.card-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0%;
+@media (max-width: 767px) {  
+    .contact {
+        grid-template-columns: 1fr;
+    }
 }

@@ -14,9 +14,9 @@ const LandingPage = () => {
                 <div id="lab-description">
                     {TEXT.LANDING_PAGE.DESCRIPTION}
                 </div>
-                <div className="btn_ubc_home">
-                <a href="https://www.ubc.ca" style={{display: "flex", justifyContent: "center", alignItems: "center", color: "#ffffff"}}>
-                    <p>{TEXT.LANDING_PAGE.UBC_PAGE_BUTTON}</p>
+                <div className="btn-ubc-home">
+                    <a href="https://www.ubc.ca" style={{display: "flex", justifyContent: "center", alignItems: "center", color: "#ffffff"}}>
+                        <p>{TEXT.LANDING_PAGE.UBC_PAGE_BUTTON}</p>
                     </a>
                 </div>
             </div>
