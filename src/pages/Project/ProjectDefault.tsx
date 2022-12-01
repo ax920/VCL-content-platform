@@ -15,24 +15,35 @@ interface ProjectProps {
 
 const ProjectDefault: React.FC<ProjectProps> = (props) => {
     // response {data: ..., message: ...}
-    const [response, setResponse] = useState<ProjectResponse>({ message: "" });
-    const [error, setError] = useState<boolean>(false);
-   
-    // run each time window.location changes
-    const location = useLocation();
-    useEffect(() => {
-        // fetch project details from backend
-        const fetchProject = async () => {
-            const [data, err] = await callGetProjectByNameAPI(props.project.name);
-            setResponse(data);
-            setError(err);
+    const [response, setResponse] = useState<ProjectResponse>(
+        {
+            message: "",
+            data: {
+                name: "Correlation",
+                description: "This is a test Correlation project created for testing purposes to test this test project. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, eius unde beatae officiis porro sunt quaerat vel voluptas provident tempore omnis velit blanditiis natus facere illum. Earum quidem ad odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nisi necessitatibus voluptatem. Voluptate sunt at illum perferendis reiciendis iste minima quis exercitationem amet quam, iure quae consequuntur inventore veritatis ipsa itaque dolore ab ullam commodi praesentium error. Repellendus debitis exercitationem reiciendis impedit, fugit reprehenderit maxime enim laudantium. Non commodi magni aliquid quia. Facere voluptatibus totam reprehenderit fugiat sunt, aut doloribus, inventore fugit obcaecati excepturi sed eveniet est saepe sapiente tempora. Non adipisci voluptatibus quidem ipsa minima repellendus nemo fuga recusandae repellat atque dolorum, facere error enim eligendi quisquam reprehenderit architecto saepe reiciendis, quod quibusdam, nihil libero quia tenetur ipsam. Deleniti?",
+                members: [],
+                isActive: true,
+            }
         }
-        fetchProject();
-    }, [location.pathname])
+    );
 
-    if (error) return (
-        <h2>Hmm...couldn't find this project on the server.</h2>
-    )
+    const [error, setError] = useState<boolean>(false);
+
+    // run each time window.location changes
+    // const location = useLocation();
+    // useEffect(() => {
+    //     // fetch project details from backend
+    //     const fetchProject = async () => {
+    //         const [data, err] = await callGetProjectByNameAPI(props.project.name);
+    //         setResponse(data);
+    //         setError(err);
+    //     }
+    //     fetchProject();
+    // }, [location.pathname])
+
+    // if (error) return (
+    //     <h2>Hmm...couldn't find this project on the server.</h2>
+    // )
 
     return (
         <div className='main'>
