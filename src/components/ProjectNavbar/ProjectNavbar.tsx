@@ -18,6 +18,10 @@ import {ProjectDefault, ProjectJoin, ProjectResources, ProjectTeam} from "@pages
 import FirstPageTwoToneIcon from '@mui/icons-material/FirstPageTwoTone';
 import {Button} from "@mui/material";
 import {ROUTES} from "@statics";
+import Nova from '@pages/Project/Nova/nova';
+import Correlation from '@pages/Project/Correlation/correlation';
+import ImageTransitions from '@pages/Project/ImageTransitions/imageTransitions';
+import Ideo from '@pages/Project/Ideo/ideo';
 
 const drawerWidth = 280;
 
@@ -135,7 +139,11 @@ export default function Sidebar(props: any) {
             <Main open={open}>
                 <div className={"content-container"}>
                     <Switch>
-                        <Route exact path={props.match.url} render={() => <ProjectDefault project={props.currProject}/>}/>
+                        <Route exact path={`${ROUTES.PROJECT.BASE}/NOVA`} render={() => <Nova project={props.currProject}/>}/>
+                        <Route exact path={`${ROUTES.PROJECT.BASE}/IDEO`} render={() => <Ideo project={props.currProject}/>}/>
+                        <Route exact path={`${ROUTES.PROJECT.BASE}/Correlation`} render={() => <Correlation project={props.currProject}/>}/>
+                        <Route exact path={`${ROUTES.PROJECT.BASE}/Image Transitions`} render={() => <ImageTransitions project={props.currProject}/>}/>
+                        <Route exact path={`${props.match.url}`} render={() => <ProjectDefault project={props.currProject}/>}/> 
                         <Route exact path={`${props.match.url}/join`} render={() => <ProjectJoin project={props.currProject}/>}/>
                         <Route exact path={`${props.match.url}/resources`} render={() => <ProjectResources project={props.currProject}/>}/>
                         <Route exact path={`${props.match.url}/team`} render={() => <ProjectTeam project={props.currProject}/>}/>
