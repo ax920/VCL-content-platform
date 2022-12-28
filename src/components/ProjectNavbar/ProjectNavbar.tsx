@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {styled, useTheme} from '@mui/material/styles';
+import {makeStyles, styled, useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,7 +16,7 @@ import {Link} from "react-router-dom";
 import {Route, Switch} from "react-router";
 import {ProjectDefault, ProjectJoin, ProjectResources, ProjectTeam} from "@pages/Project";
 import FirstPageTwoToneIcon from '@mui/icons-material/FirstPageTwoTone';
-import {Button} from "@mui/material";
+import {AppBar, Button, useMediaQuery} from "@mui/material";
 import {ROUTES} from "@statics";
 import Nova from '@pages/Project/Nova/nova';
 import Correlation from '@pages/Project/Correlation/correlation';
@@ -48,7 +48,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })<{
 const DrawerHeader = styled('div')(({theme}) => ({
     display: 'flex',
     alignItems: 'center',
-    padding: theme.spacing(0, 1),
+    padding: theme.spacing(0, 0),
     // necessary for content to be below app bar
     ...theme.mixins.toolbar,
     justifyContent: 'flex-end',
@@ -56,9 +56,8 @@ const DrawerHeader = styled('div')(({theme}) => ({
 
 export default function Sidebar(props: any) {
 
-
     const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = React.useState(true);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -88,8 +87,10 @@ export default function Sidebar(props: any) {
                     width: drawerWidth,
                     flexShrink: 0,
                     '& .MuiDrawer-paper': {
+                        position: 'sticky',
                         width: drawerWidth,
                         boxSizing: 'border-box',
+                        borderColor: 'white'  
                     },
                 }}
                 variant="persistent"
@@ -102,27 +103,27 @@ export default function Sidebar(props: any) {
                     </IconButton>
                 </DrawerHeader>
                 <List>
-                    <Typography variant='subtitle2' marginLeft='30px' color = '#AEC7E3'>
+                    <Typography variant='subtitle2' marginLeft='10px' color = '#AEC7E3'>
                         Now Viewing
                     </Typography>
                     <ListItem>
-                        <Typography variant='h5' padding='15px' color = '#1C426D' fontWeight='bold'>
+                        <Typography variant='h5' marginTop='15px' marginLeft='-6px' marginBottom='10px' color = '#1C426D' fontWeight='bold'>
                             {props.currProject.name}
                         </Typography>
                     </ListItem>
-                    <Divider variant ='middle' sx={{ borderBottomWidth: 2 }} color='#B2C9EC'/>
+                    <Divider sx={{ borderBottomWidth: 1, marginBottom:'35px'}} color='#B2C9EC'/>
 
                     {props.links.map((link: any, index: any) => (
                         <ListItem key={link.title}>
                             <ListItemButton component={Link} to={link.ref}>
-                                <Typography color = '#5B7E98'>
+                                <Typography color = '#5B7E98' marginLeft='-25px'>
                                     {link.title}
                                 </Typography>
                             </ListItemButton>
                         </ListItem>
 
                     ))}
-                    <Box textAlign='center' padding='50px'>
+                    <Box textAlign='left' marginTop='50px'>
                         <Button onClick={() => {
                             window.location.pathname=ROUTES.PROJECT.BASE
                         }} variant ='outlined' style={{textTransform: 'none'}}>
