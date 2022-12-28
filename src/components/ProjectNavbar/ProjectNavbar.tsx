@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {makeStyles, styled, useTheme} from '@mui/material/styles';
+import {styled, useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,7 +16,7 @@ import {Link} from "react-router-dom";
 import {Route, Switch} from "react-router";
 import {ProjectDefault, ProjectJoin, ProjectResources, ProjectTeam} from "@pages/Project";
 import FirstPageTwoToneIcon from '@mui/icons-material/FirstPageTwoTone';
-import {AppBar, Button, useMediaQuery} from "@mui/material";
+import {Button} from "@mui/material";
 import {ROUTES} from "@statics";
 import Nova from '@pages/Project/Nova/nova';
 import Correlation from '@pages/Project/Correlation/correlation';
